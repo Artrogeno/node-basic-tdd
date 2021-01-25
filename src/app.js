@@ -1,4 +1,6 @@
 const express = require('express')
+const bodyParse = require('body-parser')
+const cors = require('cors')
 
 class AppController {
   constructor() {
@@ -9,7 +11,9 @@ class AppController {
   }
 
   middlewares() {
-    this.express.use(express.json())
+    this.express.use(bodyParse.urlencoded({ extended: true }))
+    this.express.use(bodyParse.json({ limit: '2mb' }))
+    this.express.use(cors())
   }
 
   routes() {
