@@ -1,3 +1,4 @@
+const env = require('./config/environment')
 const app = require('./app')
 
-app.listen(process.env.PORT || 3000 )
+app.listen(env.port || 3000 )
