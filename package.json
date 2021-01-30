@@ -4,6 +4,10 @@
   "main": "index.js",
   "author": "Arthur Silva <root.arthur@gmail.com>",
   "license": "MIT",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "nodemon src/server.js --ignore __tests__"
+  },
   "dependencies": {
     "body-parser": "^1.19.0",
     "cors": "^2.8.5",
