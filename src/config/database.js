@@ -1,10 +1,12 @@
+const env = require('./environment')
+
 module.exports = {
-  host: '127.0.0.1',
-  port: 15432,
-  username: 'artrogeno',
-  password: 'artrogeno',
-  database: 'postgres',
-  dialect: 'postgres',
+  host: env.db.host,
+  port: env.db.port,
+  username: env.db.username,
+  password: env.db.password,
+  database: env.db.database,
+  dialect: env.db.dialect,
   logging: false,
   define: {
     timestamps: true,
