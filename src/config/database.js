@@ -7,6 +7,7 @@ module.exports = {
   password: env.db.password,
   database: env.db.database,
   dialect: env.db.dialect,
+  storage: './__tests__/database.sqlite',
   logging: false,
   define: {
     timestamps: true,
